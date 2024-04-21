@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "art_works",
+  "info": {
+    "singularName": "art-work",
+    "pluralName": "art-works",
+    "displayName": "ArtWork",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "video": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "art_works"
+    }
+  }
+}
