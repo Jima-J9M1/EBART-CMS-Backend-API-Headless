@@ -9,9 +9,9 @@ module.exports = ({ env }) => {
         connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'infinipd_strapi-admin'),
-        user: env('DATABASE_USERNAME', 'infinipd'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        database: env('DATABASE_NAME', ' infinipd_strapi'),
+        user: env('DATABASE_USERNAME', 'infinipd_admin-strapi'),
+        password: env('DATABASE_PASSWORD', 'EIAJ@XmX%-VZ'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
